@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .header-bar {
+            background: linear-gradient(to right, black 50%, rgb(17, 120, 126) 50%);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px; /* הגדלת גובה הפס העליון */
+        }
+
+        .header-bar img {
+            height: 100px; /* הגדלת גובה התמונה */
+            width: auto;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px; /* מוסיף רווח לאחר הפס העליון */
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 2rem);
+            padding: 0.75rem;
+            border: 1px solid #000; /* מסגרת שחורה */
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: rgb(17, 120, 126); /* צבע כמו הפס העליון */
+            border: none;
+            color: #fff;
+            padding: 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(13, 90, 95); /* גוון כהה יותר לכפתור בהובר */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-bar">
+    <img src="img/logo.png" alt="Logo">
+</div>
+
+<div class="container">
+    <h1>Login</h1>
+    <label for="userName">User Name</label>
+    <input type="text" id="userName" placeholder="Enter your username">
+    
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    
+    <button onclick="getUsers()">Login</button>
+    
+    <div class="error-message" id="error-message"></div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

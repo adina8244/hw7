@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Car Rental</title>
+    <style>
+        .header {
+            margin-bottom: 16px!important;
+            text-align: center!important;
+            font-family: "Montserrat", sans-serif;
+        }
+        .button {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px 16px;
+            vertical-align: middle;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            background-color: inherit;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .myInput {
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            width: 80%; /* Full-width */
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            border: 1px solid #ddd; /* Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
+        }
+        .gridcontainer {
+            place-items: stretch; /* You can change this value by selecting another option in the list */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: 10px;
+            text-align: center;
+            font-family: arial;
+        }
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+        .card button:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <h1>השכרת רכבים</h1>
+    <p>שלום user: יש אצלך כרגע 
+        <span id="number">0</span> רכבים</p>
+    <p id="cars"></p>
+    <div><button class="button">טען פריטים</button></div>
+    <input type="text" class="myInput" placeholder="חיפוש כלי">
+    <select id="sort-select">
+        <option value="name">Sort by Name</option>
+        <option value="rentalStatus">Sort by Rental Status</option>
+    </select>
+</header>
+<div class="gridcontainer"></div>
+<button id="scrollToTopBtn" style="display:none;">Scroll to Top</button>
+ </html>

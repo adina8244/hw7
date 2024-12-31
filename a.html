@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="header-bar"></div>
+    <input type="text" class="myInput" placeholder="חפש...">
+    <select id="sort-select" onchange="sortItems()">
+        <option value="name">שם</option>
+        <option value="rentalStatus">סטטוס השכרה</option>
+    </select>
+    <div class="gridcontainer"></div>
+    <button id="scrollToTopBtn" style="display: none;">↑</button>
+
+    <script src="Cars.js"></script>
+    <script src="loadData.js"></script>
+</body>
+</html>
